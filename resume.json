@@ -1,0 +1,129 @@
+{
+   "basics": {
+      "name": "Faisal Mohammed Ibrahim",
+      "label": "Engineering Manager | Solution Architect | Principal Engineer",
+      "email": "faisal.m.ibrahim@gmail.com",
+      "phone": "+91-9880935067",
+      "location": {
+         "city": "Bengaluru",
+         "region": "Karnataka",
+         "country": "India"
+      },
+      "linkedin": "https://www.linkedin.com/in/faisal-mohammed-ibrahim",
+      "summary": "Engineering Leader with 16+ years of experience delivering enterprise-scale software solutions across consulting and product engineering organizations. Specialized in Java, Spring Boot, Microservices, AWS Cloud, Kubernetes, DevOps, CI/CD, Enterprise Architecture, Cloud Modernization and Engineering Leadership.\n"
+   },
+   "skills": [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "AWS",
+      "Kubernetes",
+      "Docker",
+      "OpenShift",
+      "Kafka",
+      "DevOps",
+      "CI/CD",
+      "Python",
+      "REST APIs",
+      "JAX-RS",
+      "Akka",
+      "Couchbase",
+      "PostgreSQL",
+      "Git",
+      "Harness",
+      "Agile",
+      "SAFe",
+      "Solution Architecture",
+      "Engineering Leadership"
+   ],
+   "experience": [
+      {
+         "company": "Accenture",
+         "position": "Packaged App Development Associate Manager",
+         "startDate": "2024-08",
+         "endDate": "Present",
+         "highlights": [
+            "Lead design and delivery of enterprise-grade cloud-native applications.",
+            "Drive Agile delivery practices and stakeholder communication.",
+            "Mentor engineering teams and establish architecture and DevOps best practices.",
+            "Support cloud-first modernization strategies using AWS and Kubernetes."
+         ]
+      },
+      {
+         "company": "Allegis Group (GE Aerospace)",
+         "position": "Senior Lead Software Engineer",
+         "startDate": "2023-12",
+         "endDate": "2024-07",
+         "highlights": [
+            "Supported enterprise cloud and application modernization initiatives.",
+            "Worked on backend engineering, cloud deployment and DevOps automation.",
+            "Participated in architecture reviews and technical design discussions."
+         ]
+      },
+      {
+         "company": "OpenText / Micro Focus",
+         "position": "Software Engineering Specialist (Designer V)",
+         "startDate": "2021-08",
+         "endDate": "2023-12",
+         "highlights": [
+            "Designed enterprise software solutions for large-scale product platforms.",
+            "Led backend engineering using Java, Spring Boot and Microservices.",
+            "Implemented CI/CD pipelines and cloud infrastructure improvements.",
+            "Contributed to platform modernization and architecture reviews."
+         ]
+      },
+      {
+         "company": "Accenture",
+         "position": "Software Development Associate Manager / Team Lead / Senior Analyst",
+         "startDate": "2015-06",
+         "endDate": "2021-08",
+         "highlights": [
+            "Led development teams delivering enterprise applications for global clients.",
+            "Managed end-to-end software delivery and stakeholder coordination.",
+            "Drove Agile, DevOps and modernization initiatives.",
+            "Worked on hospitality client applications and digital transformation programs."
+         ]
+      },
+      {
+         "company": "Infosys",
+         "position": "Technology Analyst / Senior Systems Engineer / Systems Engineer",
+         "startDate": "2010-01",
+         "endDate": "2015-06",
+         "highlights": [
+            "Developed enterprise Java applications and integration solutions.",
+            "Served as onsite lead for Saudi Railways engagement.",
+            "Participated in architecture discussions, production support and release management."
+         ]
+      }
+   ],
+   "education": [
+      {
+         "institution": "Visvesvaraya Technological University",
+         "degree": "Bachelor of Engineering",
+         "field": "Information Science",
+         "graduationYear": 2009
+      }
+   ],
+   "certifications": [
+      "Reinvention with Agentic AI",
+      "AWS Certified Developer Associate",
+      "SAFe Practitioner",
+      "Kubernetes (K8S)",
+      "Microservices Architecture"
+   ],
+   "achievements": [
+      "ACE Award 2017",
+      "ACE Award 2018",
+      "Empaneled Interviewer",
+      "Most Valuable Player (MVP)",
+      "SME at Customer Site, Saudi Arabia"
+   ],
+   "target_roles": [
+      "Engineering Manager",
+      "Senior Engineering Manager",
+      "Solution Architect",
+      "Technical Architect",
+      "Principal Engineer",
+      "Cloud Transformation Leader"
+   ]
+}
