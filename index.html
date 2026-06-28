@@ -1,20 +1,870 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Faisal Mohammed Ibrahim | Engineering Manager</title>
-<link rel="stylesheet" href="assets/css/styles.css"></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Faisal Mohammed Ibrahim — Software Architect, Principal Engineer, Cloud Modernization Leader with 15+ years of experience." />
+<meta property="og:title" content="Faisal Mohammed Ibrahim | Software Architect" />
+<meta property="og:description" content="15+ years building scalable systems across hospitality, aerospace, and enterprise software." />
+<title>Faisal Mohammed Ibrahim | Software Architect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0e0e10;
+    --paper: #f7f6f2;
+    --mid: #6b6b72;
+    --accent: #1a56db;
+    --accent2: #0e3fa8;
+    --rule: #e2e1dc;
+    --card: #ffffff;
+    --tag-bg: #eef2ff;
+    --tag-color: #1a56db;
+    --green: #0d9488;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 60px;
+    background: rgba(247,246,242,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1.05rem;
+    color: var(--ink); text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.85rem; font-weight: 500;
+    color: var(--mid); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px 5% 60px;
+    gap: 4rem;
+    background: var(--paper);
+  }
+  .hero-left {}
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem; font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  .hero-name {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .hero-title {
+    font-size: 1.1rem;
+    color: var(--mid);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  .hero-title strong { color: var(--ink); font-weight: 600; }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent); color: #fff;
+    padding: 0.75rem 1.5rem; border-radius: 6px;
+    font-weight: 600; font-size: 0.9rem;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--accent2); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: transparent; color: var(--ink);
+    padding: 0.75rem 1.5rem; border-radius: 6px;
+    border: 1.5px solid var(--rule);
+    font-weight: 600; font-size: 0.9rem;
+    text-decoration: none; transition: border-color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--ink); }
+
+  .hero-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .stat-card.accent { background: var(--accent); color: #fff; }
+  .stat-card.accent .stat-label { color: rgba(255,255,255,0.7); }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.5rem; font-weight: 800;
+    line-height: 1; margin-bottom: 0.3rem;
+  }
+  .stat-label { font-size: 0.8rem; color: var(--mid); font-weight: 500; }
+  .stat-card.wide { grid-column: span 2; }
+  .tech-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+  .pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    background: var(--tag-bg); color: var(--tag-color);
+    padding: 0.3rem 0.6rem; border-radius: 4px;
+    font-weight: 500;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 80px 5%; }
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem; font-weight: 500;
+    color: var(--accent); letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800; letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+    line-height: 1.15;
+  }
+  .divider { border: none; border-top: 1px solid var(--rule); }
+
+  /* ── EXPERIENCE TIMELINE ── */
+  #experience { background: var(--card); }
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 0; top: 8px; bottom: 8px;
+    width: 2px; background: var(--rule);
+  }
+  .timeline-item {
+    position: relative; margin-bottom: 2.5rem;
+  }
+  .timeline-item::before {
+    content: ''; position: absolute;
+    left: -2.4rem; top: 8px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--paper);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .tl-meta {
+    display: flex; align-items: baseline;
+    gap: 1rem; flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+  }
+  .tl-role {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.05rem; font-weight: 700;
+  }
+  .tl-company {
+    font-size: 0.85rem; font-weight: 600;
+    color: var(--accent);
+  }
+  .tl-period {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem; color: var(--mid);
+    margin-left: auto;
+  }
+  .tl-desc { font-size: 0.9rem; color: var(--mid); line-height: 1.65; }
+  .tl-desc ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+  .tl-desc li { margin-bottom: 0.3rem; }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--paper); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .skill-group {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .skill-group-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem; font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .skill-group-title span { font-size: 1.1rem; }
+  .skill-bar-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .skill-bar-item {}
+  .skill-bar-top { display: flex; justify-content: space-between; margin-bottom: 0.3rem; }
+  .skill-bar-name { font-size: 0.82rem; font-weight: 500; }
+  .skill-bar-level { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--mid); }
+  .skill-bar-track {
+    height: 4px; background: var(--rule); border-radius: 99px; overflow: hidden;
+  }
+  .skill-bar-fill {
+    height: 100%; background: var(--accent); border-radius: 99px;
+    transition: width 1s ease;
+  }
+
+  /* ── CASE STUDIES ── */
+  #casestudies { background: var(--ink); color: var(--paper); }
+  #casestudies .section-label { color: #60a5fa; }
+  #casestudies .section-title { color: var(--paper); }
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .case-card {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    background: rgba(255,255,255,0.04);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .case-card:hover {
+    border-color: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.07);
+  }
+  .case-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .case-client {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem; color: #60a5fa;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .case-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: #fff; margin-bottom: 0.75rem;
+  }
+  .case-desc { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+  .case-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+  .case-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);
+    padding: 0.25rem 0.55rem; border-radius: 4px;
+  }
+
+  /* ── CERTIFICATIONS ── */
+  #certifications { background: var(--paper); }
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .cert-card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.75rem;
+    display: flex; gap: 1.2rem; align-items: flex-start;
+  }
+  .cert-icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: var(--tag-bg);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; flex-shrink: 0;
+  }
+  .cert-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+  .cert-meta { font-size: 0.82rem; color: var(--mid); }
+  .cert-badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    background: #d1fae5; color: #065f46;
+    padding: 0.2rem 0.5rem; border-radius: 4px;
+  }
+
+  /* ── ACHIEVEMENTS ── */
+  #achievements { background: var(--card); }
+  .ach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+  .ach-item {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.2rem;
+    background: var(--paper);
+    border-radius: 10px;
+    border: 1px solid var(--rule);
+  }
+  .ach-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0; margin-top: 6px;
+  }
+  .ach-text { font-size: 0.88rem; line-height: 1.55; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--paper); }
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+  .contact-left {}
+  .contact-desc { font-size: 1rem; color: var(--mid); line-height: 1.7; margin-bottom: 2rem; }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 1rem;
+    text-decoration: none; color: var(--ink);
+    font-weight: 500; font-size: 0.9rem;
+    padding: 0.9rem 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    transition: border-color 0.2s;
+  }
+  .contact-link:hover { border-color: var(--accent); }
+  .contact-link-icon { font-size: 1.2rem; width: 28px; text-align: center; }
+  .contact-right {
+    background: var(--ink);
+    border-radius: 16px;
+    padding: 2.5rem;
+    color: var(--paper);
+  }
+  .contact-right h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem; font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  .info-row { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.88rem; }
+  .info-row:last-child { border-bottom: none; }
+  .info-key { color: rgba(255,255,255,0.5); }
+  .info-val { color: #fff; font-weight: 500; text-align: right; }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2rem 5%;
+    border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.82rem; color: var(--mid);
+    background: var(--paper);
+    flex-wrap: wrap; gap: 1rem;
+  }
+  footer a { color: var(--mid); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; padding-top: 100px; }
+    .hero-right { grid-template-columns: 1fr 1fr; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    nav .nav-links { display: none; }
+    .tl-period { margin-left: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
 <body>
-<header class="hero">
-<h1>Faisal Mohammed Ibrahim</h1>
-<p>Engineering Manager • Solution Architect • Cloud Modernization Leader</p>
-<a class="btn" href="#experience">Experience</a>
-<a class="btn secondary" href="assets/docs/Resume.pdf">Resume</a>
-</header>
-<section id="stats"><div>16+ Years</div><div>AWS Certified</div><div>Java • AWS • Kubernetes</div></section>
-<section id="experience"><h2>Experience</h2><p>Timeline placeholder.</p></section>
-<section id="projects"><h2>Architecture Case Studies</h2></section>
-<section id="skills"><h2>Skills</h2></section>
-<section id="leadership"><h2>Leadership</h2></section>
-<section id="certs"><h2>Certifications</h2></section>
-<section id="contact"><h2>Contact</h2></section>
-<script src="assets/js/script.js"></script>
-</body></html>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">FMI</a>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#casestudies">Case Studies</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">// Software Architect · Principal Engineer</p>
+    <h1 class="hero-name">Faisal<br>Mohammed<br>Ibrahim</h1>
+    <p class="hero-title">
+      <strong>15+ years</strong> building scalable, cloud-native systems across
+      hospitality, aerospace, and enterprise software —
+      from architecture blueprints to production deployments.
+    </p>
+    <div class="hero-cta">
+      <a href="mailto:faisal.m.ibrahim@gmail.com" class="btn-primary">Get in Touch</a>
+      <a href="https://www.linkedin.com/in/faisal-mohammed-ibrahim-8a141449" target="_blank" class="btn-secondary">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-card accent">
+      <div class="stat-num">15+</div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">8+</div>
+      <div class="stat-label">Applications Led at Accenture</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Global Employers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">AWS</div>
+      <div class="stat-label">Certified Developer</div>
+    </div>
+    <div class="stat-card wide">
+      <div class="stat-label" style="margin-bottom:0.6rem">Core Stack</div>
+      <div class="tech-pills">
+        <span class="pill">Java</span>
+        <span class="pill">Spring Boot</span>
+        <span class="pill">AWS</span>
+        <span class="pill">Kubernetes</span>
+        <span class="pill">Kafka</span>
+        <span class="pill">Microservices</span>
+        <span class="pill">Docker</span>
+        <span class="pill">Python</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">// Career</p>
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="tl-meta">
+        <span class="tl-role">Packaged App Development Assoc. Manager</span>
+        <span class="tl-company">Accenture</span>
+        <span class="tl-period">2024 – Present</span>
+      </div>
+      <div class="tl-desc">
+        Leading Commerce Cart and Order application development in Spring Boot for Marriott International — one of the world's largest hospitality clients. Driving architecture decisions and delivery of enterprise-grade e-commerce solutions.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-meta">
+        <span class="tl-role">GE Aerospace Consultant</span>
+        <span class="tl-company">TEKSystem Global (Allegis Group)</span>
+        <span class="tl-period">2023 – 2024</span>
+      </div>
+      <div class="tl-desc">
+        Part of the CFMDX team handling critical data transfer pipelines for EWT and WALK aerospace applications supporting GE Aerospace's operational data workflows.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-meta">
+        <span class="tl-role">Software Engineering Specialist & Innovation Lead</span>
+        <span class="tl-company">Micro Focus (OpenText)</span>
+        <span class="tl-period">2021 – 2023</span>
+      </div>
+      <div class="tl-desc">
+        R&D division lead for Operations Bridge (OpsBridge) — a flagship enterprise monitoring product. Key contributions:
+        <ul>
+          <li>Built data dashboards for real-time infrastructure health visualization</li>
+          <li>Automated DB table management using Python, saving significant manual effort</li>
+          <li>Implemented BDD test automation using Python/Cucumber</li>
+          <li>Managed CI/CD pipelines through Jenkins</li>
+          <li>Developed Java-based Content Packs for metric and performance monitoring</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-meta">
+        <span class="tl-role">Software Development Associate Manager → Team Lead → Senior Analyst</span>
+        <span class="tl-company">Accenture</span>
+        <span class="tl-period">2015 – 2021</span>
+      </div>
+      <div class="tl-desc">
+        Progressed across three levels over 6 years, leading digital apps (eConfo and B2B) for a leading US-based hospitality client. Managed a team across 8 applications:
+        <ul>
+          <li>Solution design and migration of end-of-life components</li>
+          <li>TAGP application development using Akka framework</li>
+          <li>Change/release management, code reviews, and security scans</li>
+          <li>L3 incident management and root cause analysis during warranty periods</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-meta">
+        <span class="tl-role">Technical Analyst</span>
+        <span class="tl-company">Infosys</span>
+        <span class="tl-period">2013 – 2015</span>
+      </div>
+      <div class="tl-desc">
+        Full-stack development team lead for Envoy Applications, a suite of tools for a leading US auditor client. Built multiple applications using Spring, Jersey (JAX-RS), and AngularJS. Also served as <strong>SME Onshore Lead in Saudi Arabia</strong> for a leading railway client in 2014.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-meta">
+        <span class="tl-role">Systems Engineer → Senior Systems Engineer</span>
+        <span class="tl-company">Infosys</span>
+        <span class="tl-period">2010 – 2013</span>
+      </div>
+      <div class="tl-desc">
+        Began career at Infosys working on Java-based financial and auditing applications. Developed single-page applications in Spring, JAX-RS, and AngularJS for a top US auditing firm covering Training, Financial Interest, and Client Independence modules.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">// Technical</p>
+  <h2 class="section-title">Skills & Technologies</h2>
+  <div class="skills-grid">
+
+    <div class="skill-group">
+      <div class="skill-group-title"><span>⚙️</span> Core Languages</div>
+      <div class="skill-bar-list">
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Java</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Python / Perl / Bash</span><span class="skill-bar-level">Proficient</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">TypeScript / NodeJS</span><span class="skill-bar-level">Proficient</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:65%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">HTML / CSS / AngularJS</span><span class="skill-bar-level">Proficient</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:65%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title"><span>🏗️</span> Frameworks & Architecture</div>
+      <div class="skill-bar-list">
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Spring Boot / JAX-RS</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Play Framework / Akka</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Microservices / Design Patterns</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:92%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">MQ / Kafka</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title"><span>☁️</span> Cloud & DevOps</div>
+      <div class="skill-bar-list">
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">AWS</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Kubernetes (K8s) / Helm</span><span class="skill-bar-level">Proficient</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Docker / OpenShift</span><span class="skill-bar-level">Proficient</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Jenkins / Harness / Git</span><span class="skill-bar-level">Proficient</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title"><span>🗄️</span> Data & Testing</div>
+      <div class="skill-bar-list">
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Couchbase / Vertica / Postgres</span><span class="skill-bar-level">Proficient</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:72%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">Cucumber / Gherkin (BDD)</span><span class="skill-bar-level">Proficient</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-top"><span class="skill-bar-name">XML / JSON / SOAP / REST</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:95%"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- CASE STUDIES -->
+<section id="casestudies">
+  <p class="section-label">// Architecture</p>
+  <h2 class="section-title">Architecture Case Studies</h2>
+  <div class="cases-grid">
+
+    <div class="case-card">
+      <div class="case-icon">🏨</div>
+      <div class="case-client">Marriott International</div>
+      <div class="case-title">Commerce Cart & Order Platform</div>
+      <div class="case-desc">Architected and led development of hospitality e-commerce systems handling booking cart flows and order management at enterprise scale using Spring Boot microservices.</div>
+      <div class="case-tags">
+        <span class="case-tag">Spring Boot</span>
+        <span class="case-tag">Microservices</span>
+        <span class="case-tag">Java</span>
+        <span class="case-tag">AWS</span>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">✈️</div>
+      <div class="case-client">GE Aerospace · CFMDX</div>
+      <div class="case-title">Aerospace Data Transfer Pipeline</div>
+      <div class="case-desc">Designed and implemented critical data transfer pipelines for EWT and WALK aerospace applications, ensuring reliable, high-integrity data flows in a safety-critical environment.</div>
+      <div class="case-tags">
+        <span class="case-tag">Data Pipelines</span>
+        <span class="case-tag">Kafka</span>
+        <span class="case-tag">Java</span>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">📊</div>
+      <div class="case-client">Micro Focus · OpsBridge</div>
+      <div class="case-title">Enterprise Monitoring Dashboards</div>
+      <div class="case-desc">Led R&D innovation for OpsBridge monitoring product — built data visualization dashboards, automated database operations via Python, and developed Java-based content packs for performance metric monitoring.</div>
+      <div class="case-tags">
+        <span class="case-tag">Python</span>
+        <span class="case-tag">Java</span>
+        <span class="case-tag">Jenkins CI/CD</span>
+        <span class="case-tag">BDD</span>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">🚆</div>
+      <div class="case-client">Railway Client · Saudi Arabia</div>
+      <div class="case-title">Onshore SME — Railway Application</div>
+      <div class="case-desc">Served as Subject Matter Expert and onshore lead in Saudi Arabia for development and maintenance of a mission-critical railway operations application, bridging client and offshore teams.</div>
+      <div class="case-tags">
+        <span class="case-tag">Java</span>
+        <span class="case-tag">Full Stack</span>
+        <span class="case-tag">Onshore Lead</span>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">🏦</div>
+      <div class="case-client">Leading US Auditor</div>
+      <div class="case-title">Envoy — Full Stack Auditing Suite</div>
+      <div class="case-desc">Built a suite of single-page applications covering Training, Financial Interest, and Client Independence Assessment modules for one of the world's leading audit firms using Spring, JAX-RS, and Angular.</div>
+      <div class="case-tags">
+        <span class="case-tag">Spring</span>
+        <span class="case-tag">JAX-RS</span>
+        <span class="case-tag">AngularJS</span>
+        <span class="case-tag">Full Stack</span>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-icon">🌐</div>
+      <div class="case-client">US Hospitality Client · Accenture</div>
+      <div class="case-title">eConfo & B2B Digital Applications</div>
+      <div class="case-desc">Led a team across 8 digital applications for a major US hospitality brand — including eConference and B2B platforms — managing full SDLC from architecture to production support using Akka and Java.</div>
+      <div class="case-tags">
+        <span class="case-tag">Akka</span>
+        <span class="case-tag">Java</span>
+        <span class="case-tag">Team Lead</span>
+        <span class="case-tag">8 Apps</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <p class="section-label">// Credentials</p>
+  <h2 class="section-title">Certifications & Education</h2>
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <div class="cert-icon">☁️</div>
+      <div>
+        <div class="cert-name">AWS Certified Developer – Associate</div>
+        <div class="cert-meta">Amazon Web Services · 2020–2023</div>
+        <span class="cert-badge">✓ Certified</span>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon">🎓</div>
+      <div>
+        <div class="cert-name">B.E. in Engineering</div>
+        <div class="cert-meta">VTU · PACE Mangalore · Class of 2009</div>
+        <span class="cert-badge">✓ Completed</span>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon">⭐</div>
+      <div>
+        <div class="cert-name">Star Performer</div>
+        <div class="cert-meta">Accenture & Infosys — Consistent recognition for delivery excellence</div>
+        <span class="cert-badge">✓ Awarded</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <p class="section-label">// Highlights</p>
+  <h2 class="section-title">Key Achievements</h2>
+  <div class="ach-grid">
+    <div class="ach-item">
+      <div class="ach-dot"></div>
+      <div class="ach-text">AWS Certified Developer — Associate, demonstrating deep cloud architecture expertise</div>
+    </div>
+    <div class="ach-item">
+      <div class="ach-dot"></div>
+      <div class="ach-text">Consistently rated Star Performer at both Accenture and Infosys across multiple review cycles</div>
+    </div>
+    <div class="ach-item">
+      <div class="ach-dot"></div>
+      <div class="ach-text">Deployed as SME Onshore Lead at customer site in Saudi Arabia for a critical railway client</div>
+    </div>
+    <div class="ach-item">
+      <div class="ach-dot"></div>
+      <div class="ach-text">Led a cross-functional team across 8 concurrent digital applications at a major US hospitality brand</div>
+    </div>
+    <div class="ach-item">
+      <div class="ach-dot"></div>
+      <div class="ach-text">Avid participant in Continuous Improvement initiatives, driving process efficiency and innovation culture</div>
+    </div>
+    <div class="ach-item">
+      <div class="ach-dot"></div>
+      <div class="ach-text">15+ years of unbroken delivery across industries: hospitality, aerospace, auditing, and enterprise IT</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">// Let's Connect</p>
+  <h2 class="section-title">Get in Touch</h2>
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <p class="contact-desc">
+        Open to senior engineering, architecture, and technical leadership roles. Whether it's a challenging distributed systems problem or building high-performing engineering teams — let's talk.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:faisal.m.ibrahim@gmail.com" class="contact-link">
+          <span class="contact-link-icon">✉️</span>
+          faisal.m.ibrahim@gmail.com
+        </a>
+        <a href="tel:+919880935067" class="contact-link">
+          <span class="contact-link-icon">📞</span>
+          +91 98809 35067
+        </a>
+        <a href="https://www.linkedin.com/in/faisal-mohammed-ibrahim-8a141449" target="_blank" class="contact-link">
+          <span class="contact-link-icon">💼</span>
+          linkedin.com/in/faisal-mohammed-ibrahim
+        </a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <h3>Quick Profile</h3>
+      <div class="info-row">
+        <span class="info-key">Location</span>
+        <span class="info-val">Bangalore, India</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Experience</span>
+        <span class="info-val">15+ Years</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Current Role</span>
+        <span class="info-val">Assoc. Manager, Accenture</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Education</span>
+        <span class="info-val">B.E., VTU 2009</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Certification</span>
+        <span class="info-val">AWS Certified Developer</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Availability</span>
+        <span class="info-val">Open to Opportunities</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Faisal Mohammed Ibrahim</span>
+  <span>Built with precision · Bangalore, India</span>
+  <a href="https://www.linkedin.com/in/faisal-mohammed-ibrahim-8a141449" target="_blank">LinkedIn ↗</a>
+</footer>
+
+</body>
+</html>
